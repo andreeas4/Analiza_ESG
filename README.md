@@ -1,93 +1,70 @@
-📊 Analiza ESG și Performanța Financiară (S&P 500)
+# 📊 Analiza ESG și Performanța Financiară (S&P 500)
 
-Acest proiect analizează relația dintre scorurile ESG (Environmental, Social, Governance) și indicatorii financiari ai companiilor din indicele S&P 500, folosind tehnici de clustering ierarhic.
+Acest proiect analizează relația dintre scorurile **ESG (Environmental, Social, Governance)** și indicatorii financiari ai companiilor din indicele **S&P 500**, utilizând tehnici de **clustering ierarhic**.
 
-Scopul este identificarea unor grupuri omogene de companii pentru a evidenția tipare între sustenabilitate și performanța financiară.
+Scopul este identificarea unor **grupuri omogene de companii** pentru a evidenția tipare între sustenabilitate și performanța financiară.
 
-🎯 Obiectiv
+---
 
-Analiza răspunde la întrebări precum:
+## 🎯 Obiectiv
 
-Există o legătură între guvernanța corporativă și randamentul bursier?
+Analiza răspunde la următoarele întrebări:
+- Există o legătură între guvernanța corporativă și randamentul bursier?
+- Cum se grupează companiile în funcție de scorurile ESG și capitalizarea de piață?
+- Pot fi identificate profiluri ESG-financiare distincte?
 
-Cum se grupează companiile în funcție de scorurile ESG și capitalizarea de piață?
+Metodologia principală utilizată este **Hierarchical Clustering**, folosind metoda **Ward**, cu reprezentare grafică prin dendrograme.
 
-Pot fi identificate profiluri ESG-financiare distincte?
+---
 
-Metodologia principală utilizată este Hierarchical Clustering (metoda Ward), cu vizualizare prin dendrograme.
+## 🧠 Metodologie
 
-🧠 Metodologie
+- Curățarea și standardizarea datelor (z-score)
+- Calculul distanțelor între observații
+- Aplicarea clustering-ului ierarhic (Ward)
+- Determinarea automată a numărului optim de clusteri
+- Analiza distribuției variabilelor pe clusteri
 
-Curățarea și standardizarea datelor (z-score)
+---
 
-Calculul distanțelor între companii
-
-Clustering ierarhic (Ward)
-
-Determinarea automată a numărului optim de clusteri
-
-Analiza distribuției variabilelor în fiecare cluster
-
-📂 Structura Proiectului
+## 📂 Structura Proiectului
 ├── data/
-│   └── processed/
-│       └── date_standardizate.csv
+│ └── processed/
+│ └── date_standardizate.csv
 │
 ├── notebooks/
-│   └── analiza_cluster_script.py
+│ └── analiza_cluster_script.py
 │
-├── outputs/            # generat automat
-│   ├── Dendrograma_X_clusteri.png
-│   ├── Histograma_[Variabila].png
-│   └── Partitie_Optima_Script.csv
+├── outputs/ # generat automat
+│ ├── Dendrograma_X_clusteri.png
+│ ├── Histograma_[Variabila].png
+│ └── Partitie_Optima_Script.csv
 │
 ├── requirements.txt
 └── README.md
 
-Descriere foldere
+### Descriere
+- **data/** – datele utilizate în analiză  
+- **notebooks/** – scriptul Python principal  
+- **outputs/** – rezultate generate automat (grafice și fișiere CSV)
 
-data/ – datele utilizate în analiză
+---
 
-notebooks/ – scriptul Python principal al proiectului
+## ⚙️ Cerințe
 
-outputs/ – rezultate generate automat (grafice și fișiere CSV)
+Bibliotecile necesare sunt listate în `requirements.txt`:
+- pandas
+- numpy
+- scipy
+- matplotlib
+- scikit-learn
 
-⚙️ Cerințe
+---
 
-Bibliotecile necesare sunt listate în requirements.txt:
+## 🚀 Rulare Proiect
 
-pandas
-
-numpy
-
-scipy
-
-matplotlib
-
-scikit-learn
-
-🚀 Rulare Proiect
-1. Instalare dependențe
+### Instalare dependențe
+```bash
 pip install -r requirements.txt
 
-2. Rulare analiză
-python notebooks/analiza_cluster_script.py
 
-
-Scriptul va:
-
-încărca datele standardizate;
-
-rula algoritmul de clustering;
-
-genera dendrograme și histograme;
-
-salva rezultatele finale în folderul outputs/.
-
-📈 Output Final
-
-Dendrogramă pentru analiza ierarhică a companiilor
-
-Histograme pe cluster pentru variabilele analizate
-
-Fișier CSV cu alocarea fiecărei companii într-un cluster
