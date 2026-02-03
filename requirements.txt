@@ -1,0 +1,25 @@
+# Requirements pentru Analiza ESG - S&P 500
+# Proiect Data Science and Advanced Databases
+
+# Core data manipulation packages
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine Learning and Clustering
+scikit-learn>=1.3.0
+
+# Data visualization
+matplotlib>=3.7.0
+
+# Kaggle dataset access
+kagglehub>=0.2.0
+
+# Additional useful packages for Jupyter notebooks
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Optional: For better plotting
+seaborn>=0.12.0
+
+# Optional: For data quality checks
+scipy>=1.10.0
